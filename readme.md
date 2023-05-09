@@ -2,7 +2,6 @@
 The framework is based on the ptest runner
 It automatically downloads the required web drivers
 
-
 # Installation
 1. [download](https://www.python.org/downloads/release/python-3113/) and install Python 3.11.3
 2. clone the framework
