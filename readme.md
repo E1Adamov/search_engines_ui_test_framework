@@ -1,5 +1,5 @@
 # Description
-The framework is based on the ptest runner
+The framework is based on the ptest runner  
 It automatically downloads the required web drivers
 
 # Installation
