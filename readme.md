@@ -1,5 +1,10 @@
 # Description
-This is a simple example of a test automation framework based on `pytest` and `selenium`
+This is a simple example of a test automation framework based on `pytest` and `selenium`.  
+It's testing search engines `Google` and `Bing`.
+
+# Requirements
+- Python 3.11.3
+- Supported operating systems: Linux, macOS, Windows
 
 # Features:
 - Automatic download of the required web drivers
@@ -10,54 +15,51 @@ This is a simple example of a test automation framework based on `pytest` and `s
 - Customizable browser window size
 
 # Installation
-1. [download](https://www.python.org/downloads/release/python-3113/) and install Python 3.11.3
-2. clone the framework
-3. open a terminal window and navigate to the framework's root directory
-4. create a virtual environment: 
+1. [Download and install Python 3.11.3](https://www.python.org/downloads/release/python-3113/)
+2. Clone the framework
+3. Open a terminal window and navigate to the framework's root directory
+4. Create a virtual environment:
     ```commandline 
-    python -m venv <path to the framework root directory>/venv
+    python -m venv venv
     ```
-5. activate the virtual environment:
-   * POSIX:
-     ```commandline 
-     source venv/bin/activate
-     ```
-   * Windows:
-     ```commandline 
-     venv\Scripts\activate.bat
-     ```
-6. install dependencies: ``
+5. Activate the virtual environment:
+    * POSIX:
+      ```commandline 
+      source venv/bin/activate
+      ```
+    * Windows:
+      ```commandline 
+      venv\Scripts\activate.bat
+      ```
+6. Install dependencies:
      ```commandline 
      pip install -r requirements.txt
      ```
 
-# Running tests:
-In order to run test, you have to navigate to the framework's root directory
+# Running Tests:
+To run tests, navigate to the framework's root directory.
 
-## CLI options
-* all the pytest's option - [see documentation](https://docs.pytest.org/en/6.2.x/usage.html)
-* --browser  
-  `required`: yes  
-  `default value`: none  
-  `options`: chrome, firefox
-* --headless  
-  `required`: yes  
-  `default value`: True  
-  `options`: True, False
-* --browser_width  
-  `required`: yes  
-  `default value`: 1920
-* --browser_height  
-  `required`: yes  
-  `default value`: 1080
-* --search_string  
-  `required`: no  
-  `default value`: none
+## CLI Options
+- All the pytest's options - [see documentation](https://docs.pytest.org/en/6.2.x/usage.html)
+- --browser
+    - Required: yes
+    - Default value: none
+    - Options: chrome, firefox
+- --headless
+    - Required: yes
+    - Default value: True
+    - Options: True, False
+- --browser_width
+    - Required: yes
+    - Default value: 1920
+- --browser_height
+    - Required: yes
+    - Default value: 1080
+- --search_string
+    - Required: no
+    - Default value: none
 
-For example, to run all the tests in 
-[tests/search_results/test_search_engine_results.py](tests/search_results/test_search_engine_results.py) 
-and pass the <search_string>="quantum", in a headless firefox browser, screen size 1920x1080, 
-you should use this command:
+### Example Command:
 ```commandline
 pytest --browser="firefox" --search_string="quantum" "tests/search_results/test_search_engine_results.py"
 ```
