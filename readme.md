@@ -1,6 +1,13 @@
 # Description
-The framework is based on the ptest runner  
-It automatically downloads the required web drivers
+This is a simple example of a test automation framework based on `pytest` and `selenium`
+
+# Features:
+- Automatic download of the required web drivers
+- Page Object Model
+- Custom wrapper around `selenium` with automatic wait
+- Execution parallelization
+- Customizable browser type
+- Customizable browser window size
 
 # Installation
 1. [download](https://www.python.org/downloads/release/python-3113/) and install Python 3.11.3
